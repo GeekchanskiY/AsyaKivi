@@ -10,9 +10,25 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
   </head>
   <body>
-    <header>
+     <header class="header">
+        <div class="logo">Logo</div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
 
-    </header>
+        <div class="menu">
+            <div class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Catalog</a>
+                <div class="dropdown-content">
+                    <a href="#">Category 1</a>
+                    <a href="#">Category 2</a>
+                    <a href="#">Category 3</a>
+                </div>
+            </div>
+            <a href="#">Contacts</a>
+        </div>
+     </header>
     <main>
         {% block content %}
             Welcome to AsyaKivi!
