@@ -1,21 +1,28 @@
 from django.contrib import admin
 
-from main.models import Color, Item, ColorRequirement, ItemImage
+from main.models import Item, ItemImage, Category, Collection, ItemCollection
 
-
-# Register your models here.
-@admin.register(Color)
-class ColorAdmin(admin.ModelAdmin):
-    pass
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(ColorRequirement)
-class ColorRequirementAdmin(admin.ModelAdmin):
-    pass
 
 @admin.register(ItemImage)
 class ItemImageAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(Collection)
+class CollectionAdmin(admin.ModelAdmin):
+    pass
+
+
+@admin.register(ItemCollection)
+class ItemCollectionAdmin(admin.ModelAdmin):
     pass
