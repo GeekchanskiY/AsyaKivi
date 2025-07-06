@@ -33,7 +33,7 @@ class CollectionImageAdmin(admin.ModelAdmin):
 
 @admin.register(Session)
 class SessionAdmin(admin.ModelAdmin):
-    pass
+    readonly_fields = ('last_visit',)
 
 @admin.register(CartItem)
 class CartItemAdmin(admin.ModelAdmin):

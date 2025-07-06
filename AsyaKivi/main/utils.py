@@ -1,4 +1,5 @@
 import django.http.request
+from django.utils import timezone
 
 from .models import Session
 
@@ -6,6 +7,7 @@ from .models import Session
 def process_user_visit(request: django.http.request.HttpRequest):
     try:
         session = Session.objects.get(session_key=request.session.session_key)
+        session.save() # обновляет время последнего визита
     except Session.DoesNotExist:
         user_ip, user_agent = get_user_data(request)
         session = Session.objects.create(session_key=request.session.session_key, ip=user_ip, user_agent=user_agent)
