@@ -24,6 +24,11 @@ body {
     color: #333;
 }
 
+.header-logo{
+    width: 36px;
+    height: 36px;
+}
+
 /* Navigation menu container */
 .menu {
     display: flex;

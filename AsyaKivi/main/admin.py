@@ -1,11 +1,11 @@
 from django.contrib import admin
 
-from main.models import Item, ItemImage, Category, Collection, ItemCollection
+from main.models import Item, ItemImage, Category, Collection, ItemCollection, CollectionImage, Session, CartItem
 
 
 @admin.register(Item)
 class ItemAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('name', 'code', 'amount', 'price', 'category')
 
 
 @admin.register(ItemImage)
@@ -25,4 +25,16 @@ class CollectionAdmin(admin.ModelAdmin):
 
 @admin.register(ItemCollection)
 class ItemCollectionAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(CollectionImage)
+class CollectionImageAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Session)
+class SessionAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(CartItem)
+class CartItemAdmin(admin.ModelAdmin):
     pass
